@@ -29,8 +29,10 @@ Create another variable called `periods` and give it the value of years*12.
 */
 
 let monthlyInterestRate = interestRate / 12;
+console.log(monthlyInterestRate);
 
 let periods = years*12;
+console.log(periods);
 
 
 // 🏡 Task 2: Harder Math
@@ -52,26 +54,26 @@ When your math is correct, monthlyRate will equal 1073.64
 
 
 //Hailey's math
-// Numerator = I*(1 + I)^N, which is the same as Math.pow((1 + I), N);
+// Numerator = (I*(1 + I)^N), which is the same as I*(Math.pow((1 + I), N));
 // Therefore, 
 
-let numerator = interestRate * (Math.pow(1 + interestRate), periods);
+let numerator = monthlyInterestRate * Math.pow((1 + monthlyInterestRate), periods);
 console.log(numerator);
 
-//it is 18 --QUESTION: is this correct?
+//it is 0.018615601308358983
 
 // Denominator = (1 + I)^N - 1, which is the same as (Math.pow(1 + I), N) -1)
 // Therefore,
 
-let denominator = (Math.pow(1 + interestRate), periods) -1;
+let denominator = (Math.pow((1 + monthlyInterestRate), periods) -1);
 console.log(denominator);
 
-// it is 359.
+// it is 3.467744314006156
 
-let monthlyRate = principal*(numerator/denominator);
+let monthlyRate = (principal * numerator) / denominator;
 console.log(monthlyRate);
 
-// it console logs 10027.85 ---- ASK QUESTION if monthlyRate is same an monthly payment? is my answer correct?
+// it console logs 1073.6432460242763 ---- CORRECT!
 
 //THEN, keep going, following directions on what you need to solve next.
 
@@ -86,6 +88,12 @@ If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly 
 */
 
 
+
+function mortgageCalculator(name, monthlyRate){
+return ('name' + ', your monthly rate is' + 'monthlyRate');
+}
+
+console.log('Hailey,' + ' your monthly rate is' + ' $1073.64');
 
 
 
