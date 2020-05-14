@@ -6,7 +6,19 @@
 
 console.log('Does mine work?');
 
-let 
+let principal = '200000';
+console.log(principal);
+
+let interestRate = '0.05';
+console.log(interestRate);
+
+let years = '30';
+console.log(years);
+
+const name = 'Hailey';
+console.log(name);
+
+
 
 // 🏡 Task 1.5: Simple Math
 /* To create a monthly mortgage rate calculator, we need to know the number of years in months and the monthly interest rate. 
@@ -17,6 +29,7 @@ Create another variable called `periods` and give it the value of years*12.
 */
 
 let monthlyInterestRate = interestRate / 12;
+
 let periods = years*12;
 
 
@@ -29,6 +42,39 @@ Hint #2: you'll need to use the `math` object for parts of this calculation!
 
 When your math is correct, monthlyRate will equal 1073.64
 */
+
+//Hailey's Notes
+//What everything means
+// M = monthly payment (what i'm trying to solve for)
+// P = principal amount you borrowed (i am calling this principal)
+// I = interest rate on mortgage (i am calling this interestRate)
+// N = number of periods of monthly payments (so this will be years*12, defined here as periods)
+
+
+//Hailey's math
+// Numerator = I*(1 + I)^N, which is the same as Math.pow((1 + I), N);
+// Therefore, 
+
+let numerator = interestRate * (Math.pow(1 + interestRate), periods);
+console.log(numerator);
+
+//it is 18 --QUESTION: is this correct?
+
+// Denominator = (1 + I)^N - 1, which is the same as (Math.pow(1 + I), N) -1)
+// Therefore,
+
+let denominator = (Math.pow(1 + interestRate), periods) -1;
+console.log(denominator);
+
+// it is 359.
+
+let monthlyRate = principal*(numerator/denominator);
+console.log(monthlyRate);
+
+// it console logs 10027.85 ---- ASK QUESTION if monthlyRate is same an monthly payment? is my answer correct?
+
+//THEN, keep going, following directions on what you need to solve next.
+
 
 
 
