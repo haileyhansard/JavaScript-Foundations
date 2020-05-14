@@ -15,7 +15,7 @@ console.log(interestRate);
 let years = '30';
 console.log(years);
 
-const name = 'Hailey';
+let name = 'Hailey';
 console.log(name);
 
 
@@ -89,11 +89,11 @@ If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly 
 
 
 
-function mortgageCalculator(name, monthlyRate){
-return ('name' + ', your monthly rate is' + 'monthlyRate');
+function mortgageCalculator(principal, monthlyInterestRate, period){
+console.log(name + ', your monthly rate is ' + monthlyRate); 
 }
 
-console.log('Hailey,' + ' your monthly rate is' + ' $1073.64');
+mortgageCalculator();
 
 
 
@@ -104,7 +104,7 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-
+// Confused...
 
 
 
@@ -114,7 +114,12 @@ mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 Then, add control flow within your function such that IF creditScore is above 740, interest rate drops by 0.5%, if credit score is below 660, interest rate increases by 0.5% and if credit score is anywhere between 660 and 740 interest rate doesn't change.
 */
 
+let creditScore = '790';
+console.log(creditScore);
 
+function mortgageCalculator(parameter, monthlyInterestRate, period, creditScore){
+
+}
 
 
 // 🏡 Task 6: Loops
