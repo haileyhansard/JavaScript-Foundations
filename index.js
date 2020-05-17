@@ -89,15 +89,15 @@ If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly 
 
 
 
-// function mortgageCalculator(principal, rate, periods, name){
-//     let monthlyInterestRate = rate / 12;
-//     let numerator = monthlyInterestRate * Math.pow((1 + monthlyInterestRate), periods);
-//     let denominator = (Math.pow((1 + monthlyInterestRate), periods) -1);
-//     let monthlyRate = (principal * numerator) / denominator;
-//     console.log(name + ', your monthly rate is ' + monthlyRate.toFixed(2)); 
-// }
+function mortgageCalculator(principal, rate, periods, name){
+    let monthlyInterestRate = rate / 12;
+    let numerator = monthlyInterestRate * Math.pow((1 + monthlyInterestRate), periods);
+    let denominator = (Math.pow((1 + monthlyInterestRate), periods) -1);
+    let monthlyRate = (principal * numerator) / denominator;
+    console.log(name + ', your monthly rate is ' + monthlyRate.toFixed(2)); 
+}
 
-// mortgageCalculator(principal, interestRate, periods, "Hailey");
+mortgageCalculator(principal, interestRate, periods, "Hailey");
 
 
 
@@ -110,15 +110,15 @@ mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 
 //
 
-// function mortgageCalculator(principal, rate, years, name){
-//     let monthlyInterestRate = rate / 12;
-//     let periods = years*12;
-//     let numerator = monthlyInterestRate * Math.pow((1 + monthlyInterestRate), periods);
-//     let denominator = (Math.pow((1 + monthlyInterestRate), periods) -1);
-//     let monthlyRate = principal * (numerator / denominator);
-//     return (name + ', your monthly rate is ' + monthlyRate.toFixed(2)); 
-// }
-// console.log(mortgageCalculator(200000, 0.05, 30, "Hailey"));
+function mortgageCalculator(principal, rate, years, name){
+    let monthlyInterestRate = rate / 12;
+    let periods = years*12;
+    let numerator = monthlyInterestRate * Math.pow((1 + monthlyInterestRate), periods);
+    let denominator = (Math.pow((1 + monthlyInterestRate), periods) -1);
+    let monthlyRate = principal * (numerator / denominator);
+    return (name + ', your monthly rate is ' + monthlyRate.toFixed(2)); 
+}
+console.log(mortgageCalculator(200000, 0.05, 30, "Hailey"));
 
 
 
@@ -129,26 +129,26 @@ mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 Then, add control flow within your function such that IF creditScore is above 740, interest rate drops by 0.5%, if credit score is below 660, interest rate increases by 0.5% and if credit score is anywhere between 660 and 740 interest rate doesn't change.
 */
 
-// let creditScore = Math.floor(Math.random() * 801);
-// console.log(creditScore);
+let creditScore = Math.floor(Math.random() * 801);
+console.log(creditScore);
 
-// function mortgageCalculator(principal, rate, years, name, creditScore){
-// if (creditScore > 740){
-//     console.log((interestRate - 0.005));
-// } else if (creditScore < 660){
-//     console.log((interestRate + 0.005));
-// } else {
-//     console.log("Interest rate stays the same");
-//     }
-// let monthlyInterestRate = rate / 12;
-// let periods = years*12;
-// let numerator = monthlyInterestRate * Math.pow((1 + monthlyInterestRate), periods);
-// let denominator = (Math.pow((1 + monthlyInterestRate), periods) -1);
-// let monthlyRate = principal * (numerator / denominator);
-// return (name + ', your monthly rate is ' + monthlyRate.toFixed(2));  
-// }
+function mortgageCalculator(principal, rate, years, name, creditScore){
+if (creditScore > 740){
+    console.log((interestRate - 0.005));
+} else if (creditScore < 660){
+    console.log((interestRate + 0.005));
+} else {
+    console.log("Interest rate stays the same");
+    }
+let monthlyInterestRate = rate / 12;
+let periods = years*12;
+let numerator = monthlyInterestRate * Math.pow((1 + monthlyInterestRate), periods);
+let denominator = (Math.pow((1 + monthlyInterestRate), periods) -1);
+let monthlyRate = principal * (numerator / denominator);
+return (name + ', your monthly rate is ' + monthlyRate.toFixed(2));  
+}
 
-// mortgageCalculator(principal, interestRate, periods, "Hailey", 640);
+mortgageCalculator(principal, interestRate, periods, "Hailey", 640);
 
 
 
